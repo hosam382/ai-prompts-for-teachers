@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مكتبة أوامر الذكاء الاصطناعي للمعلم</title>
+<meta name="description" content="30 أمراً عربياً جاهزاً للمعلم: تحضير الدروس، والاختبارات، والخطط العلاجية والإثرائية، والتقارير، والتواصل مع أولياء الأمور، والأنشطة الصفية. عبّئ الفراغات وانسخ الأمر لأي مساعد ذكاء اصطناعي.">
+<meta property="og:title" content="مكتبة أوامر الذكاء الاصطناعي للمعلم">
+<meta property="og:description" content="30 أمراً عربياً جاهزاً للمعلم. اختر الأمر، عبّئ الفراغات، وانسخه لـ ChatGPT أو Claude أو Gemini.">
+<meta property="og:image" content="https://hosam382.github.io/ai-prompts-for-teachers/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e0d0c">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <img src="seal.png" alt="" width="56" height="56">
+    <div>
+      <h1>مكتبة أوامر الذكاء الاصطناعي للمعلم</h1>
+      <p class="sub"><span id="total">30</span> أمراً جاهزاً للمعلم، تشتغل مع أي مساعد ذكي مثل ChatGPT أو Claude أو Gemini.</p>
+    </div>
+  </header>
+
+  <ol class="steps" aria-label="طريقة الاستخدام">
+    <li><b>1</b>اختر الأمر</li>
+    <li><b>2</b>عبّئ الفراغات</li>
+    <li><b>3</b>انسخه والصقه في المساعد</li>
+  </ol>
+
+  <section class="tools" aria-label="البحث والأقسام">
+    <label class="search" for="q">
+      <span class="sr">ابحث في الأوامر</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="ابحث: اختبار، خطة علاجية، ولي أمر..." autocomplete="off" enterkeyhint="search">
+    </label>
+    <div id="chips" class="chips" role="group" aria-label="الأقسام"></div>
+  </section>
+
+  <p id="count" class="count" aria-live="polite"></p>
+  <ul id="list" class="list"></ul>
+  <div id="empty" class="empty" hidden>
+    <p>ما لقينا أمر يطابق بحثك. جرّب كلمة ثانية أو اعرض كل الأوامر.</p>
+    <button id="reset" type="button" class="ghost">اعرض كل الأوامر</button>
+  </div>
+
+  <aside class="warn">
+    <b>قبل ما تستخدمها:</b> راجع أي نتيجة قبل ما تستخدمها مع طلابك، فالذكاء الاصطناعي يخطئ أحياناً.
+    ولا تلصق أسماء الطلاب أو أرقام هوياتهم أو درجاتهم الفردية في أي مساعد ذكي، واكتب وصفاً عاماً بدلها.
+  </aside>
+
+  <footer class="foot">
+    <span>صنعها حسام حسين خدا بخش</span>
+    <a href="https://github.com/hosam382/ai-prompts-for-teachers">الكود مفتوح على GitHub</a>
+  </footer>
+</main>
+
+<dialog id="panel" class="panel" aria-labelledby="pTitle" aria-describedby="pWhen">
+  <div class="pin">
+    <header class="phead">
+      <div class="ptitle">
+        <span id="pCat" class="tag"></span>
+        <h2 id="pTitle"></h2>
+        <p id="pWhen" class="when"></p>
+      </div>
+      <button id="pClose" class="x" type="button" aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+
+    <div class="pbody">
+      <section class="fill" aria-labelledby="fillH">
+        <div class="shead">
+          <h3 id="fillH">عبّئ الفراغات</h3>
+          <button id="clear" type="button" class="link">امسح الخانات</button>
+        </div>
+        <p class="hint">اكتب اللي تعرفه. الخانة اللي تتركها فاضية تبقى بين قوسين وتكملها في المساعد.</p>
+        <div id="fields" class="fields"></div>
+        <p class="privacy">لا تكتب أسماء طلاب أو أرقام هوياتهم أو درجاتهم الفردية. اكتب وصفاً عاماً بدلها.</p>
+      </section>
+
+      <section class="prev" aria-labelledby="prevH">
+        <div class="shead">
+          <h3 id="prevH">الأمر جاهز</h3>
+          <span id="pLeft" class="left" aria-live="polite"></span>
+        </div>
+        <div id="preview" class="ptext" tabindex="0" role="region" aria-label="نص الأمر بعد التعبئة"></div>
+      </section>
+    </div>
+
+    <footer class="pfoot">
+      <div class="actions">
+        <button id="copy" type="button" class="primary">انسخ الأمر</button>
+        <button id="copyRaw" type="button" class="ghost">انسخ بدون تعبئة</button>
+      </div>
+      <p class="review">راجع أي نتيجة قبل ما تستخدمها مع طلابك.</p>
+    </footer>
+  </div>
+  <div id="ptoast" class="toast" role="status" aria-live="polite"></div>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

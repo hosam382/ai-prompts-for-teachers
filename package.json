@@ -1,0 +1,11 @@
+{
+  "name": "ai-prompts-for-teachers",
+  "version": "1.0.0",
+  "description": "مكتبة أوامر الذكاء الاصطناعي للمعلم: أوامر عربية جاهزة تعبّي فراغاتها وتنسخها",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "author": "Hassam Hussain Khada Bakhsa"
+}
