@@ -1,5 +1,5 @@
 # مكتبة أوامر الذكاء الاصطناعي للمعلم | AI Prompts for Teachers
-**By [Hassam Hussain Khada Bakhsa](https://github.com/hosam382)**
+**By [Hassam](https://github.com/hosam382)**
 
 **جرّبها الآن | Live:** https://hosam382.github.io/ai-prompts-for-teachers/
 
